@@ -4,9 +4,9 @@ defmodule Rumbl.Repo do
   In memory repository.
   """
   def all(Rumbl.User) do
-    [%Rumbl.User{id: "1", name: "Jose", username: "josev", password: "elixir"},
+    [%Rumbl.User{id: "1", name: "Jose", username: "jose va", password: "elixir"},
     %Rumbl.User{id: "2", name: "Bruce", username: "redrapids", password: "elixir"},
-    %Rumbl.User{id: "3", name: "Chris", username: "chrism", password: "elixir"},]
+    %Rumbl.User{id: "3", name: "Chris", username: "chris mc", password: "elixir"},]
   end
   def all(_module), do: []
 

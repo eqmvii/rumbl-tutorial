@@ -16,6 +16,9 @@ defmodule Rumbl.Router do
   scope "/", Rumbl do
     pipe_through :browser # Use the default browser stack
 
+    get "/users", UserController, :index
+    get "/users/:id", UserController, :show
+    # note the common phoenix actions - :show, :index, :new, :create, :edit, :update, and :delete
     get "/", PageController, :index
   end
 
