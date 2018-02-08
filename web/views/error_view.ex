@@ -1,6 +1,9 @@
 defmodule Rumbl.ErrorView do
   use Rumbl.Web, :view
 
+  # note that these use render directly from the view, rather than going through a template
+  # This is because it's all just functions, functions all the way down
+  # And render is just passed a page and assigns and returns a tuple for HTML safety
   def render("404.html", _assigns) do
     "Page not found"
   end

@@ -1,6 +1,8 @@
 <div class="jumbotron">
   <h2>Welcome to Rumbl.io!</h2>
   <p class="lead">Rumble out loud</p>
+  <h2>See the users:</h2>
+  <%= link "View", to: user_path(@conn, :index) %>
 </div>
 
 <div class="row marketing">
