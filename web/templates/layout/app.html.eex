@@ -13,18 +13,41 @@
 
   <body>
     <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="/">Return to Home</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
-      </header>
 
-      # flash messages from the flash plug will appear here 
+    <div class="header">
+      <ol class="breadcrumb text-right">
+        <li>
+          <a class="text-left" href="/">Home</a>
+        </li>
+        <li>
+          <%= link "User List", to: user_path(@conn, :index) %>
+        </li>
+        <!-- all assigns are @ available, so @current_user checks assigns for a current user -->
+        <%= if @current_user do %>
+          <li>
+            <b>Hello, <%= @current_user.username %>!</b>
+          <li>
+            <%= link "Log out", to: session_path(@conn, :delete, @current_user), method: "delete" %>
+          </li>
+        <% else %>
+          <li>
+            <%= link "Register", to: user_path(@conn, :new) %>
+          </li>
+          <li>
+            <%= link "Log in", to: session_path(@conn, :new) %>
+          </li>
+        <% end %>
+      </ol>
+      <span class="logo"></span>
+    </div>
+
+
+
+      <!-- flash messages from the flash plug will appear here -->
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+
+
 
       <main role="main">
         <%# this is where the magic happens, special asigns from the layout %>
