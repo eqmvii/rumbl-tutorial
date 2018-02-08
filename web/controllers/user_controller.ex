@@ -18,8 +18,11 @@ defmodule Rumbl.UserController do
         render conn, "show.html", user: user
     end
 
+    # using the changeset to insulate the controller from the change polciies in the model
+    # the changeset is a datastructure that tracks changes and their validity
+    # prior to hitting persistance
     def create(conn, %{"user" => user_params}) do
-        changeset = User.changeset(%User{}, user_params)
+        changeset = User.registration_changeset(%User{}, user_params)
         case Repo.insert(changeset) do
             {:ok, user} ->
                 conn

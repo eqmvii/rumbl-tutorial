@@ -4,7 +4,7 @@
     <div class="alert alert-danger">
         <p>Oops, something went wrong! Please check the errors below.</p>
     </div>
-<%= else %>
+<% else %>
     <div class="alert alert-success" role="alert">
         <p>Create a new user</p>
     </div>

@@ -2,7 +2,11 @@
 
 ### usage: 
 
+to start app:
 mix phx.server
+
+To load app into iex:
+iex -s mix
 
 - - - - - 
 
