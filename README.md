@@ -1,12 +1,21 @@
 # Rumbl - phoenix tutorial app from Programming Phoenix
 
+
+# IMPORTANT NOTE: USE PHOENIX NOT PHX WHENEVER POSSIBLE
+
+phoenix is 1.3 style directory, phoenix is 1.2 style.
+
 ### usage: 
 
 to start app:
-mix phx.server
+mix phoenix.server
 
 To load app into iex:
 iex -s mix
+
+### generators
+
+mix phoenix.gen.html Video videos user_id:references:users url:string title:string description:text
 
 - - - - - 
 
