@@ -32,7 +32,7 @@ defmodule Rumbl.VideoController do
       {:ok, video} ->
         conn
         |> put_flash(:info, "Video created successfully.")
-        |> redirect(to: video_path(conn, video))
+        |> redirect(to: video_path(conn, :show, video))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
     end
