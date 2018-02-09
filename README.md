@@ -17,6 +17,8 @@ iex -s mix
 
 mix phoenix.gen.html Video videos user_id:references:users url:string title:string description:text
 
+mix phoenix.gen.model Category categories name:string
+
 - - - - - 
 
 To start your Phoenix app:

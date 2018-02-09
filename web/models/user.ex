@@ -8,7 +8,7 @@ defmodule Rumbl.User do
         field :password_hash, :string
         has_many :videos, Rumbl.Video
 
-        timestamps
+        timestamps()
     end
 
     # had to change this from :empty to :invalid to get around an error
