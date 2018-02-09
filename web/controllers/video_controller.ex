@@ -1,3 +1,6 @@
+# this started life generated
+# woah!
+
 defmodule Rumbl.VideoController do
   use Rumbl.Web, :controller
 

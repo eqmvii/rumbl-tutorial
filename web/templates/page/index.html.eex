@@ -1,6 +1,7 @@
 <div class="jumbotron">
-  <h2>Welcome to Rumbl.io!</h2>
-  <p class="lead">It is a Phoenix Application</p>
-  <h2>See the current list of users:</h2>
-  <%= link "View", to: user_path(@conn, :index) %>
+  <h1>Welcome</h1>
+  <h2>See users:</h2>
+  <%= link "User List", to: user_path(@conn, :index) %>
+  <h2>See videos:</h2>
+  <%= link "Video List", to: video_path(@conn, :index) %>
 </div>
