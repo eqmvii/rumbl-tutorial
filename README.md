@@ -3,7 +3,7 @@
 
 # IMPORTANT NOTE: USE PHOENIX NOT PHX WHENEVER POSSIBLE
 
-phoenix is 1.3 style directory, phoenix is 1.2 style.
+phoenix is 1.3 style directory, phoenix is 1.2 style
 
 ### usage: 
 
